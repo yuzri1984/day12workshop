@@ -7,6 +7,16 @@
     <title>ThymeLeaf Dynamic Content Page 1</title>
 </head>
 <body>
-    <h1>Welcome to my First ThymeLeaf page</h1>
+    <h1><u><i>Welcome to my First ThymeLeaf page</i></u></h1>
+
+    <h2>The current time is <span data-th-text="${currTime}"></span></h2>
+
+    <div data-th-if="${currHour le 12}">
+        Good Morning!
+    </div>
+
+    <div data-th-unless="${currHour le 12}">
+        Good afternoon!
+</div>
 </body>
 </html>
